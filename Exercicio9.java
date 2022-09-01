@@ -13,9 +13,8 @@ public class Exercicio9 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		List<Employee> list = new ArrayList<>(); // o tipo list é uma interface, e para usar usar ela tem que instanciar
-													// uma classe concreta que implementa a interface
-		// que implementa o list
+		List<Employee> list = new ArrayList<>(); // o tipo list é uma interface, e para usar usar ela tem que instanciar 
+	 	// uma classe concreta que implementa a interface que implementa o list
 
 		System.out.println("How many employees will be registered? ");
 		int N = sc.nextInt();
@@ -26,8 +25,8 @@ public class Exercicio9 {
 			System.out.print("Id: ");
 			Integer id = sc.nextInt();
 			System.out.print("Name: ");
-			sc.nextLine(); // esse nextline foi usado pois o nextline abaixo iria consumir a quebra de
-							// linha do enter
+			sc.nextLine(); // esse nextline foi usado pois o nextline abaixo iria consumir a quebra de linha do enter
+							
 			String name = sc.nextLine();
 			System.out.print("Salary: ");
 			Double salary = sc.nextDouble();
@@ -46,8 +45,8 @@ public class Exercicio9 {
 		} else {
 			System.out.print("Enter the percentage: ");
 			double percent = sc.nextDouble();
-			list.get(pos).increaseSalary(percent); // dá o comando para acessar a função do objeto de incrementar o
-													// salario
+			list.get(pos).increaseSalary(percent); // dá o comando para acessar a função do objeto de incrementar o salario
+													
 
 		}
 
@@ -60,14 +59,14 @@ public class Exercicio9 {
 	}
 	// o static serve para usar uma função dentro de uma mesma classe
 
-	public static Integer position(List<Employee> list, int id) { // cria uma função auxiliar para procurar um valor na
-																	// lista
-		for (int i = 0; i < list.size(); i++) { // ela recebe a lista dos funcionario e vai retornar a posição do
-			// funcionario na lista
+	public static Integer position(List<Employee> list, int id) { // cria uma função auxiliar para procurar um valor na lista
+																	
+		for (int i = 0; i < list.size(); i++) { // ela recebe a lista dos funcionario e vai retornar a posição do funcionario na lista
+			
 			//list.size define o tamanho da lista, e até onde o for vai seguir
-			if (list.get(i).getId() == id) { // se id na posição i lá na classe for igual ao id
-				// o list.get pega o elemento na posição
-				return i; // determina a posição do valor encontrado
+			if (list.get(i).getId() == id) { // se id na posição i lá na classe for igual ao id o list.get pega o elemento na posição
+				
+				return i; 
 			}
 		}
 		return null;
